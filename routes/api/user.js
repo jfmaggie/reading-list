@@ -19,7 +19,6 @@ apiRoutes.post('/login', function(req, res) {
   });
 });
 
-
 // #index
 apiRoutes.get('/users', function(req, res) {
   User.findAll().then(function(users) {
