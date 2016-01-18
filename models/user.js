@@ -11,6 +11,12 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
       }
+    },
+    instanceMethods: {
+      comparePassword: function(password) {
+        var hash = this.getDataValue('password');
+        return bcrypt.compareSync(password, hash);
+      }
     }
   });
 

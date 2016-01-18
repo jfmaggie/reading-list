@@ -59,8 +59,10 @@
     "webpack-hot-middleware": "^2.4.1"
   },
   "dependencies": {
+    "bcrypt": "~0.8.5",
     "body-parser": "^1.14.2",
     "history": "^1.17.0",
+    "jsonwebtoken": "^5.5.4",
     "pg": "^4.4.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
@@ -70,7 +72,6 @@
     "redux-logger": "^2.3.1",
     "redux-promise": "^0.5.0",
     "redux-thunk": "^1.0.0",
-    "sequelize": "^3.15.1",
-    "bcrypt": "~0.8.5"
+    "sequelize": "^3.15.1"
   }
 }
