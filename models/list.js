@@ -1,7 +1,8 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var List = sequelize.define('List', {
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    userId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
