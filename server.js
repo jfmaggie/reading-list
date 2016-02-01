@@ -8,6 +8,7 @@ var app = express();
 var compiler = webpack(config);
 
 var userRoutes = require('./routes/api/user');
+var listRoutes = require('./routes/api/list');
 
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath,
@@ -24,6 +25,8 @@ app.use(bodyParser.json());
 
 // Routing
 app.use('/api', userRoutes);
+app.use('/api', listRoutes);
+
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
